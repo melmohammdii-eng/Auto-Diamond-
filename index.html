@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Diamond</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SECTION 1: HEADER / NAVIGATION
+       To customize: edit nav links in <ul class="nav-links">
+       To add links: duplicate an <li> element
+  ============================================================ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <span class="logo-diamond" aria-hidden="true"></span>
+        <span class="logo-text">AUTO <strong>DIAMOND</strong></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <!-- ADD YOUR NEW NICHE NAV LINKS HERE -->
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn--outline nav-cta">Contact Us</a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       SECTION 2: HERO CAROUSEL
+       To customize: add/remove .slide items inside .hero-track
+       Each slide has a background image set via data-bg attribute.
+       Replace data-bg values with your own image URLs.
+       Replace all slide text and CTAs to match your new niche.
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero carousel">
+    <div class="hero-track" id="heroTrack">
+
+      <!-- SLIDE 1 — replace data-bg and all text -->
+      <div class="slide" data-bg="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <p class="slide-eyebrow">Your Eyebrow Text Here</p>
+          <h1 class="slide-heading">Your main headline<br><em>goes right here.</em></h1>
+          <p class="slide-subheading">Replace this with a short, compelling description of what you offer.</p>
+          <div class="slide-actions">
+            <a href="#" class="btn btn--primary">Primary CTA</a>
+            <a href="#contact" class="btn btn--ghost">Secondary CTA</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 — replace data-bg and all text -->
+      <div class="slide" data-bg="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <p class="slide-eyebrow">Your Eyebrow Text Here</p>
+          <h1 class="slide-heading">Second slide<br><em>headline here.</em></h1>
+          <p class="slide-subheading">Replace this with another value proposition or featured category.</p>
+          <div class="slide-actions">
+            <a href="#" class="btn btn--primary">Primary CTA</a>
+            <a href="#contact" class="btn btn--ghost">Secondary CTA</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 — replace data-bg and all text -->
+      <div class="slide" data-bg="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <p class="slide-eyebrow">Your Eyebrow Text Here</p>
+          <h1 class="slide-heading">Third slide<br><em>headline here.</em></h1>
+          <p class="slide-subheading">Replace this with a third feature, collection, or call to action.</p>
+          <div class="slide-actions">
+            <a href="#" class="btn btn--primary">Primary CTA</a>
+            <a href="#contact" class="btn btn--ghost">Secondary CTA</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /hero-track -->
+
+    <!-- Carousel Controls -->
+    <button class="hero-arrow hero-arrow--prev" id="heroPrev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero-arrow hero-arrow--next" id="heroNext" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+
+    <!-- Slide Indicators -->
+    <div class="hero-dots" id="heroDots" aria-label="Slide navigation"></div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3: COLLAPSIBLE FILTER
+       Only the FILTER trigger is visible by default — centered.
+       Click it to toggle the filter panel open/closed.
+       To add a filter: duplicate a .filter-group block inside .filter-panel.
+       To remove a filter: delete that .filter-group block.
+  ============================================================ -->
+  <section class="filter-section" id="search">
+    <div class="container">
+
+      <!-- Centered trigger — this is the only thing visible by default -->
+      <button class="filter-trigger" id="filterTrigger" aria-expanded="false" aria-controls="filterPanel">
+        <span class="filter-trigger__icon" aria-hidden="true">◈</span>
+        <span class="filter-trigger__text">Filter</span>
+        <svg class="filter-trigger__chevron" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+
+      <!-- Collapsible panel — hidden until trigger is clicked -->
+      <div class="filter-panel" id="filterPanel" aria-hidden="true">
+        <div class="filter-panel__inner">
+
+          <div class="filter-panel__grid">
+
+            <!-- Filter 1 — rename label and options for your niche -->
+            <div class="filter-group">
+              <label class="filter-label" for="filterOne">Category</label>
+              <select class="filter-select" id="filterOne">
+                <option value="">All Categories</option>
+                <!-- ADD YOUR OPTIONS HERE -->
+              </select>
+            </div>
+
+            <!-- Filter 2 — rename label and options for your niche -->
+            <div class="filter-group">
+              <label class="filter-label" for="filterTwo">Type</label>
+              <select class="filter-select" id="filterTwo">
+                <option value="">All Types</option>
+                <!-- ADD YOUR OPTIONS HERE -->
+              </select>
+            </div>
+
+            <!-- Filter 3 — rename label and options for your niche -->
+            <div class="filter-group">
+              <label class="filter-label" for="filterThree">Sort By</label>
+              <select class="filter-select" id="filterThree">
+                <option value="">Default</option>
+                <!-- ADD YOUR OPTIONS HERE -->
+              </select>
+            </div>
+
+            <!-- Price / range slider — relabel as needed -->
+            <div class="filter-group filter-group--price">
+              <label class="filter-label" for="filterPrice">
+                Max Price
+                <output class="price-output" id="priceOutput">Any Price</output>
+              </label>
+              <div class="price-slider-wrap">
+                <input type="range" class="price-slider" id="filterPrice"
+                       min="0" max="10000" step="100" value="10000" />
+              </div>
+            </div>
+
+          </div><!-- /filter-panel__grid -->
+
+          <div class="filter-panel__footer">
+            <button class="btn btn--ghost filter-reset-btn" id="filterResetBtn">Reset</button>
+            <button class="btn btn--primary filter-search-btn" id="filterSearchBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                   aria-hidden="true" style="width:14px;height:14px">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              Search
+            </button>
+          </div>
+
+        </div><!-- /filter-panel__inner -->
+      </div><!-- /filter-panel -->
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 4: CONTENT CARDS
+       The card grid is preserved and niche-neutral.
+       Duplicate .card blocks to add more items.
+       Replace image src, title, price, and spec lines freely.
+  ============================================================ -->
+  <section class="cards-section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-rule"></div>
+        <div class="section-title-block">
+          <p class="section-eyebrow">Featured Items</p>
+          <h2 class="section-title">Our <em>Collection</em></h2>
+        </div>
+        <a href="#" class="btn btn--outline section-view-all">View All →</a>
+      </div>
+
+      <div class="cards-grid" id="cardsGrid">
+
+        <!-- ── CARD 1 — replace image, title, price, specs ── -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="" alt="Item title" class="card-image" loading="lazy" />
+            <span class="card-badge card-badge--new">New</span>
+            <button class="card-wishlist" aria-label="Save to wishlist">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-year">2025</span>
+              <span class="card-dot" aria-hidden="true">·</span>
+              <span class="card-make">Category</span>
+            </div>
+            <h3 class="card-title">Item Title</h3>
+            <p class="card-price">$0,000</p>
+            <ul class="card-specs">
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Spec One
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+                Spec Two
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                Spec Three
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#contact" class="btn btn--primary card-btn">View Details</a>
+              <a href="#contact" class="card-link">Learn More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 2 ── -->
+        <article class="card card--featured">
+          <div class="card-image-wrap">
+            <img src="" alt="Item title" class="card-image" loading="lazy" />
+            <span class="card-badge card-badge--featured">Featured</span>
+            <button class="card-wishlist" aria-label="Save to wishlist">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-year">2025</span>
+              <span class="card-dot" aria-hidden="true">·</span>
+              <span class="card-make">Category</span>
+            </div>
+            <h3 class="card-title">Item Title</h3>
+            <p class="card-price">$0,000</p>
+            <ul class="card-specs">
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Spec One
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+                Spec Two
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                Spec Three
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#contact" class="btn btn--primary card-btn">View Details</a>
+              <a href="#contact" class="card-link">Learn More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 3 ── -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="" alt="Item title" class="card-image" loading="lazy" />
+            <span class="card-badge card-badge--cpo">Popular</span>
+            <button class="card-wishlist" aria-label="Save to wishlist">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-year">2025</span>
+              <span class="card-dot" aria-hidden="true">·</span>
+              <span class="card-make">Category</span>
+            </div>
+            <h3 class="card-title">Item Title</h3>
+            <p class="card-price">$0,000</p>
+            <ul class="card-specs">
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Spec One
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+                Spec Two
+              </li>
+              <li class="card-spec">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                Spec Three
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#contact" class="btn btn--primary card-btn">View Details</a>
+              <a href="#contact" class="card-link">Learn More →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /cards-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 5: FOOTER
+       To customize: edit address, phone, email, and social links.
+       Replace footer column headings and links for your niche.
+       To add a new column: duplicate a .footer-col block.
+  ============================================================ -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="container footer-top__inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <span class="logo-diamond" aria-hidden="true"></span>
+            <span class="logo-text">AUTO <strong>DIAMOND</strong></span>
+          </a>
+          <!-- Replace tagline with your new niche slogan -->
+          <p class="footer-tagline">Your brand tagline goes here.</p>
+          <div class="footer-socials">
+            <!-- Replace href with your social media URLs -->
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M4 20L20 4"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-cols">
+          <!-- Column 1 — replace heading and links for your niche -->
+          <div class="footer-col">
+            <h4 class="footer-col__heading">Explore</h4>
+            <ul class="footer-col__links">
+              <li><a href="#">Link One</a></li>
+              <li><a href="#">Link Two</a></li>
+              <li><a href="#">Link Three</a></li>
+              <li><a href="#">Link Four</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2 — replace heading and links for your niche -->
+          <div class="footer-col">
+            <h4 class="footer-col__heading">Company</h4>
+            <ul class="footer-col__links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact — always stays; edit details below -->
+          <div class="footer-col footer-col--contact">
+            <h4 class="footer-col__heading">Contact Us</h4>
+            <address class="footer-address">
+              <p>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <!-- Replace with your address -->
+                123 Diamond Boulevard, Suite 100<br>Beverly Hills, CA 90210
+              </p>
+              <p>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <!-- Replace with your phone number -->
+                <a href="tel:+13105550199">(310) 555-0199</a>
+              </p>
+              <p>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <!-- Replace with your email address -->
+                <a href="mailto:hello@autodiamond.com">hello@autodiamond.com</a>
+              </p>
+            </address>
+            <a href="#contact" class="btn btn--primary footer-contact-btn">Get in Touch</a>
+          </div>
+        </div><!-- /footer-cols -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom__inner">
+        <p class="footer-copy">© 2025 Auto Diamond. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
